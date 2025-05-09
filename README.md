@@ -1,75 +1,98 @@
-# Nuxt Minimal Starter
+# Validador de Bandeira de Cartão
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Projeto desenvolvido para identificar e validar a bandeira de cartões de crédito a partir do número informado pelo usuário. Utiliza Nuxt 3, TypeScript e segue boas práticas de performance e organização de código.
 
-## Setup
+## Funcionalidades
 
-Make sure to install dependencies:
+- Identificação automática da bandeira do cartão (Visa, MasterCard, etc.)
+- Validação do número do cartão
+- Interface web responsiva
+- Código modular e fácil de manter
 
-```bash
-# npm
-npm install
+## Estrutura do Projeto
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+```plaintext
+├── app.vue
+├── nuxt.config.ts
+├── package.json
+├── tsconfig.json
+├── vitest.config.ts
+├── composables/
+│   └── validarBandeira.ts
+├── pages/
+│   └── index.vue
+├── assets/
+│   └── css/
+│       ├── main.css
+│       └── tailwind.css
+├── public/
+│   └── favicon.ico
+├── tests/
+│   └── validarBandeira.spec.ts
+└── ...
 ```
 
-## Development Server
+- **composables/validarBandeira.ts**: Função principal para validação e identificação da bandeira.
+- **pages/index.vue**: Página principal com o formulário de entrada do cartão.
+- **assets/css/**: Estilos customizados.
+- **tests/**: Testes automatizados.
 
-Start the development server on `http://localhost:3000`:
+## Instalação
 
-```bash
-# npm
-npm run dev
+1. Clone o repositório:
 
-# pnpm
+   ```sh
+   git clone https://github.com/MarcosAlves90/validador-bandeira-cartao-dio.git
+   cd validador_bandeira_cartao_dio
+   ```
+
+2. Instale as dependências:
+
+   ```sh
+   pnpm install
+   ```
+
+## Uso
+
+Para rodar o projeto em modo desenvolvimento:
+
+```sh
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+Acesse [http://localhost:3000](http://localhost:3000) no navegador.
 
-Build the application for production:
+## Testes
 
-```bash
-# npm
-npm run build
+Execute os testes automatizados com:
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+```sh
+pnpm test
 ```
 
-Locally preview production build:
+## Como funciona
 
-```bash
-# npm
-npm run preview
+O usuário informa o número do cartão na interface. O sistema utiliza a função [`validarBandeira`](composables/validarBandeira.ts) para identificar a bandeira e validar o número, exibindo o resultado na tela.
 
-# pnpm
-pnpm preview
+## Tecnologias Utilizadas
 
-# yarn
-yarn preview
+- [Nuxt 3](https://nuxt.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vitest](https://vitest.dev/) para testes
+- [pnpm](https://pnpm.io/) para gerenciamento de pacotes
 
-# bun
-bun run preview
-```
+## Contribuição
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b minha-feature`)
+3. Commit suas alterações (`git commit -m 'feat: minha nova feature'`)
+4. Faça push para a branch (`git push origin minha-feature`)
+5. Abra um Pull Request
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+---
+
+> Projeto para fins educacionais, desenvolvido para o bootcamp da DIO.
