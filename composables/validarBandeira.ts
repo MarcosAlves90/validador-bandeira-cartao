@@ -3,11 +3,26 @@ export function validateCardBrand(cardNumber: string): { brand: string | null; v
 
     const luhnCheck = (n: string): boolean => {
         if (!/^\d+$/.test(n) || n.length < 13) return false;
-        return n.split('').reverse().reduce((sum, digit, idx) => {
-            let d = parseInt(digit);
-            if (idx % 2) d *= 2;
-            return sum + (d > 9 ? d - 9 : d);
-        }, 0) % 10 === 0;
+        
+        let sum = 0;
+        let shouldDouble = false;
+        
+        // Percorre da direita para a esquerda
+        for (let i = n.length - 1; i >= 0; i--) {
+            let digit = parseInt(n.charAt(i), 10);
+            
+            if (shouldDouble) {
+                digit *= 2;
+                if (digit > 9) {
+                    digit -= 9;
+                }
+            }
+            
+            sum += digit;
+            shouldDouble = !shouldDouble;
+        }
+        
+        return (sum % 10) === 0;
     };
 
     const brandPatterns: { [key: string]: RegExp[] } = {
