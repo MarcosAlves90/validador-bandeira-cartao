@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.common-block {
+  @apply w-full rounded-lg border border-gray-300 bg-white px-4 py-3 text-base shadow-sm max-sm:text-sm;
+}
