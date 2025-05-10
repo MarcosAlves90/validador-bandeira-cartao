@@ -15,7 +15,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <main class="min-h-screen flex flex-col items-center justify-center p-5">
+  <main class="min-h-screen flex flex-col items-center justify-center p-5 bg-gray-bg">
     <NuxtPage/>
   </main>
 </template>

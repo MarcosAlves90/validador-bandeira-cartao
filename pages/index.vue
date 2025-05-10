@@ -18,7 +18,7 @@ const addCard = () => {
 </script>
 
 <template>
-  <div class="h-full flex flex-col items-center justify-center gap-7 max-w-2xl w-full">
+  <div class="h-full flex flex-col items-center justify-center gap-7 max-w-2xl w-full text-white">
     <h1 class="font-bold text-center text-2xl max-sm:text-lg">Validador de Bandeira de Cartão</h1>
     <div class="w-full flex items-center justify-center gap-2 max-sm:flex-col">
       <input
