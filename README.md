@@ -1,6 +1,6 @@
 # Validador de Bandeira de Cartão
 
-Projeto desenvolvido para identificar e validar a bandeira de cartões de crédito a partir do número informado pelo usuário. Utiliza Nuxt 3, TypeScript e segue boas práticas de performance e organização de código.
+Projeto desenvolvido para identificar e validar a bandeira de cartões de crédito gerados pela 4devs a partir do número informado pelo usuário. Utiliza Nuxt 3, TypeScript e segue boas práticas de performance e organização de código.
 
 ## Funcionalidades
 
